@@ -1,0 +1,18 @@
+name: Lean check
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: leanprover/lean-action@v1
+      - name: Mutation tests (false claims must be rejected)
+        run: bash mutants/check_mutants.sh

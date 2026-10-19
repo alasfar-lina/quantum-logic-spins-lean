@@ -1,0 +1,3 @@
+theorem no_hidden_variable_embedding (Ω : Type*) :
+    ¬ ∃ f : Submodule ℂ V → Set Ω, Function.Injective f ∧
+        (∀ p q, f (p ⊓ q) = f p ∩ f q) ∧ (∀ p q, f (p ⊔ q) = f p ∪ f q) := …

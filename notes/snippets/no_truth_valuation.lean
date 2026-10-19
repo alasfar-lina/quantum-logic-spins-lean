@@ -1,0 +1,3 @@
+theorem no_truth_valuation :
+    ¬ ∃ v : Submodule ℂ V → Bool, v ⊤ = true ∧ v ⊥ = false ∧
+        (∀ p q, v (p ⊓ q) = (v p && v q)) ∧ (∀ p q, v (p ⊔ q) = (v p || v q)) := …
